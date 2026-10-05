@@ -4,7 +4,10 @@ An interior lighting prototype that adapts a WS2812B LED strip to its environmen
 
 Course project, Shenzhen Technology University, Sep – Dec 2025.
 
-<!-- DEMO VIDEO: delete this line and drag the mp4 here in the GitHub web editor -->
+
+https://github.com/user-attachments/assets/0c00677c-3ed4-4f04-b851-fef87b816fa6
+
+
 
 ## Features
 
