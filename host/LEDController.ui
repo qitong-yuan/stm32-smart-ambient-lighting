@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LEDController</class>
+ <widget class="QMainWindow" name="LEDController">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>493</width>
+    <height>747</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>车载智能照明系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_main">
+    <item>
+     <widget class="QGroupBox" name="groupSerial">
+      <property name="title">
+       <string>串口连接</string>
+      </property>
+      <layout class="QHBoxLayout" name="layoutSerial">
+       <item>
+        <widget class="QLabel" name="labelPort">
+         <property name="text">
+          <string>端口:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboPort"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRefresh">
+         <property name="text">
+          <string>刷新</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnConnect">
+         <property name="text">
+          <string>连接</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelStatus">
+         <property name="text">
+          <string>未连接</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupMode">
+      <property name="title">
+       <string>工作模式</string>
+      </property>
+      <layout class="QVBoxLayout" name="layoutMode">
+       <item>
+        <widget class="QPushButton" name="btnSmartMode">
+         <property name="text">
+          <string>智能模式 </string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnCustomMode">
+         <property name="text">
+          <string>个性模式</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>智能模式设置</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout_3">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupSmart">
+         <property name="title">
+          <string>功能</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkTemp">
+            <property name="text">
+             <string>温度适应</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="checkHumi">
+            <property name="text">
+             <string>湿度适应</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkWelcome">
+            <property name="text">
+             <string>迎宾模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="checkDrive">
+            <property name="text">
+             <string>驾驶模式</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="smart_scene_group">
+         <property name="title">
+          <string>预设场景</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QRadioButton" name="normal">
+            <property name="text">
+             <string>默认模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="long_trip_drive">
+            <property name="text">
+             <string>长途模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QRadioButton" name="romantic_scene">
+            <property name="text">
+             <string>氛围模式</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QRadioButton" name="emergency_scene">
+            <property name="text">
+             <string>紧急模式</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>个性模式设置</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QGroupBox" name="groupCustomColor">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>4</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>个性颜色设置</string>
+         </property>
+         <layout class="QVBoxLayout" name="layoutCustom">
+          <item>
+           <layout class="QHBoxLayout" name="layoutR">
+            <item>
+             <widget class="QLabel" name="labelR">
+              <property name="text">
+               <string>红色 (R):</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="sliderR">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelRValue">
+              <property name="text">
+               <string>135</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="layoutG">
+            <item>
+             <widget class="QLabel" name="labelG">
+              <property name="text">
+               <string>绿色 (G):</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="sliderG">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelGValue">
+              <property name="text">
+               <string>206</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="layoutB">
+            <item>
+             <widget class="QLabel" name="labelB">
+              <property name="text">
+               <string>蓝色 (B):</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="sliderB">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelBValue">
+              <property name="text">
+               <string>215</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="layoutPreview">
+            <item>
+             <widget class="QLabel" name="labelPreviewText">
+              <property name="text">
+               <string>颜色预览:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelPreview">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(135,206,215);</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnPickColor">
+              <property name="text">
+               <string>选择颜色</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnApplyColor">
+            <property name="text">
+             <string>应用颜色</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupLight">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80000</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>灯光</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QRadioButton" name="steady_effect">
+            <property name="text">
+             <string>默认模式</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="breathing_effect">
+            <property name="text">
+             <string>呼吸模式</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="blinking_effect">
+            <property name="text">
+             <string>闪烁模式</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="flowing_effect">
+            <property name="text">
+             <string>流水模式</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupReceive">
+      <property name="title">
+       <string>接收数据</string>
+      </property>
+      <layout class="QVBoxLayout" name="layoutReceive">
+       <item>
+        <widget class="QLabel" name="labelReceive">
+         <property name="text">
+          <string>等待数据...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
